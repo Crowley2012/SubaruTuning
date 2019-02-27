@@ -1,7 +1,0 @@
-How to flash Carberry rom?
-Will backing up current rom be a Carberry rom?
-What is the Carberry ROM Patch.exe?
-How to get from stock rom to Carberry?
-Why does Carberry rom boost to 24psi?
-Why does rom A4TC300L boost to 16psi?
-16-bit ECU swappable?
