@@ -1,3 +1,20 @@
+what happens is when IAM is at say 12 it is only appling 3/4 of the ignition advance map (IAM 8 = 1/2 of the ign advance)
+
+try logging only the essentials to track knock
+
+· Engine Load (Direct)* (g/rev)
+· Engine Speed (rpm)
+· Feedback Knock Correction* (degrees)
+· Fine Learning Knock Correction* (degrees)
+· Fine Learning Table Offset* (index position)
+· Ignition Total Timing (degrees)
+· Manifold Relative Pressure (Corrected) (psi)
+· Throttle Opening Angle (%)
+do an ecu reset and take a learning view, do a 3rd gear 2k to redline
+WOT log, and then do a learing view and post here, i will look at it
+
+
+
 Monitors
 	Knock Sum
 	IAM - Ignition Advance Multiplier
