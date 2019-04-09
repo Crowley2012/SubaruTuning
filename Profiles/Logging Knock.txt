@@ -1,15 +1,27 @@
+Manifold Pressure - Standard Parameters
+
+‘Manifold Absolute Pressure’ - this standard SSM parameter will read no higher than about 37 psia.
+‘Manifold Relative Pressure’ - this standard SSM parameter is limited to about 18.4 psig regardless of atmospheric pressure.
+‘Manifold Relative Pressure (Corrected)’ - This is a calculated parameter (still based on standard parameters) that is limited to about 22.3 psig at sea level. The actual limit will depend on the local atmospheric pressure (37psia - atmospheric pressure). For example, if atmospheric pressure is 13 psi, then this parameter would be limited to 24 psig (37psia - 13 psi = 24 psig).
+Manifold Pressure - Extended Parameters
+
+‘Manifold Absolute Pressure (Direct)*’ or ‘Manifold Absolute Pressure (4-byte)’ - This extended parameter reads the manifold pressure value directly as used by the ECU. As such, it has no effective limit.
+‘Manifold Relative Sea Level Pressure (Direct)*’ or Manifold Relative Sea Level Pressure (4-byte)’ - This extended parameter also has no effective limit. It is not the actual relative pressure, however. This parameter assumes sea level atmospheric pressure (14.7 psi). Although this will not match actual relative pressure if local atmospheric pressure is different from 14.7 psi, it will match the standard units ECU definitions in relation to relative manifold pressure (ex. Target Boost).
+‘Manifold Relative Pressure (Direct)*’ or Manifold Relative Pressure (4-byte)’ - This extended parameter also has no effective limit. It is the actual relative pressure.
+
+
 what happens is when IAM is at say 12 it is only appling 3/4 of the ignition advance map (IAM 8 = 1/2 of the ign advance)
 
 try logging only the essentials to track knock
 
-� Engine Load (Direct)* (g/rev)
-� Engine Speed (rpm)
-� Feedback Knock Correction* (degrees)
-� Fine Learning Knock Correction* (degrees)
-� Fine Learning Table Offset* (index position)
-� Ignition Total Timing (degrees)
-� Manifold Relative Pressure (Corrected) (psi)
-� Throttle Opening Angle (%)
+· Engine Load (Direct)* (g/rev)
+· Engine Speed (rpm)
+· Feedback Knock Correction* (degrees)
+· Fine Learning Knock Correction* (degrees)
+· Fine Learning Table Offset* (index position)
+· Ignition Total Timing (degrees)
+· Manifold Relative Pressure (Corrected) (psi)
+· Throttle Opening Angle (%)
 do an ecu reset and take a learning view, do a 3rd gear 2k to redline
 WOT log, and then do a learing view and post here, i will look at it
 
