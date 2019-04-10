@@ -1,3 +1,11 @@
+Any negative values showing up in FBKC = knock
+Any negative values showing up in FLKC = knock in your cars history
+Change in your knock sum = knock
+
+The logged "knock correction advance" values can change based on your advance mapping. The logged value is your advance map multiplied by your IAM minus any FLKC or FBKC corrections. So no, value changes to knock correction advance do not necessarily indicate knock.
+
+
+
 Manifold Pressure - Standard Parameters
 
 ‘Manifold Absolute Pressure’ - this standard SSM parameter will read no higher than about 37 psia.
