@@ -74,7 +74,7 @@
         <parameter id="P12" dash="selected" units="g/s"/>
         <parameter id="P11" units="F"/>
         <parameter id="P58" units="AFR"/>
-        <parameter id="P13" units="%"/>
+        <parameter id="P13" dash="selected" units="%"/>
         <parameter id="P15" units="V"/>
         <parameter id="P18" units="V"/>
         <parameter id="P17" units="V"/>

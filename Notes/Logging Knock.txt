@@ -1,0 +1,211 @@
+Manifold Pressure - Standard Parameters
+
+‘Manifold Absolute Pressure’ - this standard SSM parameter will read no higher than about 37 psia.
+‘Manifold Relative Pressure’ - this standard SSM parameter is limited to about 18.4 psig regardless of atmospheric pressure.
+‘Manifold Relative Pressure (Corrected)’ - This is a calculated parameter (still based on standard parameters) that is limited to about 22.3 psig at sea level. The actual limit will depend on the local atmospheric pressure (37psia - atmospheric pressure). For example, if atmospheric pressure is 13 psi, then this parameter would be limited to 24 psig (37psia - 13 psi = 24 psig).
+Manifold Pressure - Extended Parameters
+
+‘Manifold Absolute Pressure (Direct)*’ or ‘Manifold Absolute Pressure (4-byte)’ - This extended parameter reads the manifold pressure value directly as used by the ECU. As such, it has no effective limit.
+‘Manifold Relative Sea Level Pressure (Direct)*’ or Manifold Relative Sea Level Pressure (4-byte)’ - This extended parameter also has no effective limit. It is not the actual relative pressure, however. This parameter assumes sea level atmospheric pressure (14.7 psi). Although this will not match actual relative pressure if local atmospheric pressure is different from 14.7 psi, it will match the standard units ECU definitions in relation to relative manifold pressure (ex. Target Boost).
+‘Manifold Relative Pressure (Direct)*’ or Manifold Relative Pressure (4-byte)’ - This extended parameter also has no effective limit. It is the actual relative pressure.
+
+
+what happens is when IAM is at say 12 it is only appling 3/4 of the ignition advance map (IAM 8 = 1/2 of the ign advance)
+
+try logging only the essentials to track knock
+
+· Engine Load (Direct)* (g/rev)
+· Engine Speed (rpm)
+· Feedback Knock Correction* (degrees)
+· Fine Learning Knock Correction* (degrees)
+· Fine Learning Table Offset* (index position)
+· Ignition Total Timing (degrees)
+· Manifold Relative Pressure (Corrected) (psi)
+· Throttle Opening Angle (%)
+do an ecu reset and take a learning view, do a 3rd gear 2k to redline
+WOT log, and then do a learing view and post here, i will look at it
+
+
+
+Monitors
+	Knock Sum
+	IAM - Ignition Advance Multiplier
+	FLKC - Fine Learning Knock Correction
+	FBKC - Feedback Knock Correction
+
+http://www.romraider.com/forum/viewtopic.php?t=6156
+
+I welcome your questions and comments.
+
+1. Prerequisites
+Getting Started With Tuning And Logging
+How To Make Useful Data Logs
+
+2. Scope
+Typically, when someone creates a data log, they just want to know if their car is healthy or not. If they have chosen the right set of parameters, it usually only takes a few minutes to come up with a verdict. After reading this how-to, you should be able to review any data log and, after a few minutes, issue one of the following judgments:
+
+* This car looks healthy. Please come back with time slips.
+* This car is going to blow up real soon. Don't take any road trips with it.
+* This car isn't going to blow up soon, but it might need some work, please take some more logs.
+* This data log doesn't contain enough information to indicate whether the car is healthy or not.
+
+I can't tell you how to interpret every parameter that can possibly be logged, but I hope to explain the parameters that are most important, and how to recognize when they indicate that a car is healthy or not.
+
+This how-to is primarily intended for RomRaider users (because it was written by one) but if you are using Cobb's tools almost all of it will still be relevant. This translation guide may be helpful:
+http://www.romraider.com/RomRaider/NameTranslations
+
+3. Ask Yourself: Is This Log Worth Reading?
+If someone has logged every parameter available, the log rows will be too far apart (in time) to really be useful. If one log row says 3500 RPM and the next says 4200 RPM, interesting things might have happened in between. Also note that the parameters are not all read from the ECU simultaneously - if the log row that shows 3500 RPM also shows knock, that knock might have happened at 3000 RPM or 4000 RPM, so you can't use the log to make changes to the tune.
+
+If someone has omitted important parameters, this may also render the log useless. For example if someone logs IAM and FLKC, but omits FBKC, the log may miss a lot of knock activity. 
+
+Or if they log RPM but not load or MAF, the log may show knock, but it will be impossible to use that log to make improvements to the tune, since you won't know which table cells to make changes to. (If a log does show knock, the next question is often "what should I do?" In this case, the answer will be "make a useful data log.")
+
+If a data log shows an hour of driving, it may contain lots of useful information, but finding that information is like searching for a needle in a haystack. Ask the person who posted the log where the interesting parts are. (There are also Excel spreadsheets that can help, but those are beyond the scope of this how-to.)
+
+But remember that not all logs are created to determine whether or not an engine is healthy. Often, a person who knows their engine is healthy will log a smaller set of parameters in order to examine one issue in particular. If you see a log with an unfamiliar set of parameters, find out what the person who took the log was trying to learn. Those might just be the parameters that are important for the specific issue that they are concerned about. Such logs are outside the scope of this how-to.
+
+Now, on to the interesting stuff:
+
+4. Knock
+* Is the engine knocking at all?
+* If so, then at what RPM and load did the knock happen?
+* What was the throttle doing when the knock happened?
+
+Knock is a leading cause of death for high-performance motors - especially Subaru motors. So, the most important thing you can learn from a typical data log is whether or not the motor is knocking. 
+
+There are two ways to see knock in data logs. The simplest way is to log the Knock Sum parameter, but this is not available for all ECUs. The alternative is to log three parameters which describe how the ECU is responding to knock events. This is more complicated, but it is the only option available for many Subarus.
+
+Since the ECU learns to pull timing in response to knock, it is important to know how much timing has been pulled prior to the data log. A knock-free log means nothing if the ECU has pulled timing before the log was taken. So, before making a data log, use Learning View to see how much timing has been pulled already. If IAM is at maximum and the FLKC table is all zero, you may log. If not, you should reset the ECU before logging, and wait for the IAM to return to maximum (which may require only a single mild pull). 
+
+Also, before reviewing someone else's data log, find out if they took a Learning View snapshot first, to verify that IAM was at maximum and the FLKC table was empty. If they haven't, the motor may have pulled timing, so even if the log appears healthy, the motor may not be.
+
+4.1. Knock: Reading "Knock Sum"
+The "Knock Sum" parameter is the simplest way to log knock activity - it will increment by 1 every time the ECU detects the beginning of a series of knock events. This is not quite the same as incrementing with every knock event, but it's close enough.
+
+Note that the ECU may "detect" knock even when there was not actually any knock - it's not perfect. For example, Knock Sum will often increment in idle and cruise (below about .75 g/rev load), and the consensus on the Subaru forums is that this is most likely just noise - it can be ignored except perhaps in extreme cases. 
+
+Ideally, the Knock Sum column in a data log will contain the same value for the entire log. Sometimes the Knock Sum will increment during quick throttle changes, such as at the start or end of a pull. The lift-throttle cases are particularly difficult to tune out - they might even just be noise, though this hasn't been proven yet. Knock at the start of a pull may indicate too much timing, not enough fuel, or not enough tip-in. It probably won't kill your motor, but it's worth spending some time to minimize it.
+
+The biggest cause for concern is knock in the middle of a pull. This is less likely to be noise, and knock at high boost is more likely to damage a motor - if not immediately, then over the long term. If you see multiple knocks during a pull, you should assume that it is legitimate knock, the car is not healthy, and the tune needs work. Since the ECU will usually pull timing when Knock Sum increments, the increments that follow the first one probably indicate that the car knocks even with retarded timing.
+
+If you see just one Knock Sum increment during a pull, it may or may not indicate a real problem. Even a healthy tune will have false alarms from time to time. One way to determine whether such knock was real is to reset the ECU (to remove any learned timing reductions) and do another pull in the same circumstances (same starting RPM, same gear, etc). If the car knocks at a similar RPM and load, then timing should be reduced at that RPM/load site. If the car doesn't, then the Knock Sum increment was likely just noise. Do two or three more pulls just to be sure.
+
+4.2. Knock: Reading IAM, FLKC, and FBKC
+Unfortunately, not all Subarus support the Knock Sum parameter. To detect detonation in such cars, you'll need to log three parameters: Ignition Advance Multiplier (IAM), Fine Learning Knock Correction (FLKC), and Feedback Knock Correction (FBKC). When the ECU detects knock, it will adjust one of those three parameters to try to prevent more knock.
+
+The ECU might pull timing for a couple seconds. This is called Feedback Knock Correction (FBKC). In such cases, the FBKC column will show a series of shrinking values, from -2.1 to -1.4 to -0.35 to zero, for example. Feedback knock correction typically begins with a 2.1 degree reduction in timing, and the timing reduction gets smaller over time in increments of 0.35 degrees. Those numbers (2.1 and 0.35) can be changed in the tune, so they may not always be quite like that, but the pattern will be the same - pull some timing, and taper that to zero over the course of a couple seconds.
+
+Note that feedback correction is used when the ECU hears (what it thinks is) knock, while load is changing rapidly. It's very common to see FBKC in logs when you're stomping on the throttle, releasing the throttle from 100% to 0%, and especially when shifting (release, then stomp, plus maybe some drivetrain noise too). It's pretty much impossible to completely get rid of FBKC in those situations. It's worth trying, by reducing timing or adding fuel, but if that doesn't help, then undo those changes and just get used to seeing it under those circumstances.
+
+The ECU might also pull timing in an RPM/load range around where the knock event occurred, and keep using that timing correction for that RPM/load range. This is called Fine Learning Knock Correction (FLKC). The ECU has a table in memory which divides the RPM and load ranges into a bunch of cells, and in each cell it remembers how much timing to pull when the current RPM and load are within that cell. Merchgod's Learning View utility will show you the current contents of that table.
+
+FLKC is tricky to interpret in data logs. The problem is that when you see a stretch of -1.4 numbers in that column, you can't really know if that's because the ECU knocked at that moment, or if you're merely seeing a correction that the ECU learned some time ago. If you reset the ECU before taking a log, then you can know that the first instance of -1.4 that you see does indicate knock. But for subsequent instances of -1.4 in that column, it's not easy to say. If they happen at a very different RPM / load combination, then it's probably an actual knock event. You'd need to know the row and column headers of the FLKC table to be certain.
+
+By default, the ECU pulls 1.4 degrees when it uses FLKC to mitigate knock. If you see a number more negative than -1.4 in the FLKC column, then the ECU has knocked in that range, pulled timing, and knocked again even with pulled timing. This is cause for concern - it means that the knock was not only repeated, but pulling 1.4 degrees wasn't sufficient to fix it.
+
+Finally, the ECU can respond to a knock event by reducing IAM. This effectively cuts timing across most of the RPM/load table. This is widely believed to be the ECU's way of adjusting to a tank of low-octane gasoline. It has seen knock at many RPM and load sites, so it cuts timing across the board rather than waiting for the FLKC table to fill in the necessary knock corrections one cell at a time.
+
+If you see IAM less than its full value (1.0 on a 32-bit car, or 16 on a 16-bit car), you know that the ECU is running reduced timing across the board. This is almost always a sign of an unhealthy engine or a tank of bad fuel. 
+
+What governs which approach the ECU uses to mitigate a particular knock event? It varies between cars. My car tends to use FBKC only when I'm doing abrupt throttle changes (stomping or lifting), and FLKC for everything else. I helped a local guy install a mail-order tune and do some logging, and his car only used FBKC, even in the middle of a pull. If you do a bunch of logging with your own car you'll start to see a pattern, but don't be surprised if other peoples' cars don't behave quite the same way.
+
+There are some documented tables that govern the RPM and load ranges where each mechanism is enabled, and I'm pretty sure there are undocumented tables that govern how to choose which to use when more than one is enabled.
+
+Just for the sake of completeness... there's one more way that the ECU can respond to knock: it can do nothing. As I mentioned, there are limits for the RPM and load ranges where each of the three mechanisms above are enabled, and IAM is only used when the current ignition advance table has a value larger than some threshold (configured in the tune). 
+
+Many Subaru tuners like to increase the RPM and load ranges where each mechanism is enabled, to help them detect knock at higher RPM and load. Most novice Subaru tuners aren't aware of that trick - help spread the word.
+
+4.3 When does Knock matter? 
+
+There are no hard-and-fast rules for this, but here are some guidelines that I use. Like many guidelines, there are exceptions. These are often just matters of judgment...
+
+Knock below 1.0 load is probably not harmful. But, note that reducing timing to something like 38 degrees can reduce knock at higher RPM here, especially when hitting the throttle after holding steady speed at 4000 RPM or more (many stock tunes run 45 degrees or more in this area).
+
+Knock sensor activity below 3000 RPM and 1.0 load is normal, even on stock tunes. On a 2-hour drive I might see a dozen or more knock sum increments in cruise. Note that the dynamic ignition advance tables are usually full of 0 around here, meaning that even when the ECU pulls timing via IAM, it doesn't change timing in this area. I think that this implies that the timing in this area is not knock-limited even with non-premium fuel. So if it knocks here, it may well be noise. (But note that I've seen some older Subarus such as the USDM 02 WRX that run very high timing in this area, and less is better.)
+
+If you get only one knock event in a pull, it could just be noise. Reset the ECU if FLKC was used (to restore full timing) and do another pull to see if it knocks in the same RPM/load area.
+
+If the FLKC table has more than 1.4 degrees pulled, then the ECU pulled timing and still saw knock - that's something I'd take steps to address.
+
+5. Air
+* What's the highest MAF reading, and at what RPM?
+* What's the highest load reading, and at what RPM?
+
+Airflow is measured in grams per second, by the Mass Air Flow sensor (MAF sensor). It's roughly proportional to horsepower. In fact, by some strange coincidence, the raw numbers are even similar - 100 grams per second is roughly (very roughly) 100 wheel horsepower if the tune is good. Generally speaking, if you're pumping more air, you're making more power.
+
+In addition to looking for the peak airflow, look for fluctuations of MAF over time. This often goes hand-in-hand with fluctuating boost, which indicates that boost control needs to be tuned a bit more.
+
+If you look at enough data logs you'll start to get a rough idea of what MAF and load readings are typical for different cars or conditions. For example, most Subarus draw about 3 grams per second at idle. Peak power will see MAF readings of 200-300 grams per second for mildly modified cars, or double that for heavily modified cars. 
+
+Airflow can also be viewed as grams per revolution, which shows up in the Load columns. Load is somewhat proportional to torque, though in this case the raw numbers look nothing alike. But if you plot load over RPM, you'll get a curve that looks a lot like your torque curve, and that's not a coincidence.
+
+Load will reach 1 g/rev at roughly the same time that the intake manifold goes from vacuum to boost. Load peaks at around 2 g/rev for a stock 2.0L, or more than double that for a 2.5L with a big turbo.
+
+Some people 'trick' their 16-bit ECUs to see half the normal MAF and load, in order to properly manage airflow higher than the ECU was designed for - this isn't a problem, just something to be aware of.
+
+If you see values that are way outside the normal ranges, you should wonder why. It might be a clue to a problem - my car's load typically peaks around 3.6 g/rev, yet on a dyno it hit 4.0, and after the dyno session it never went above 3.6 again. The dyno's boost sensor was leaking! If a car appears to be drawing 5 grams per second at idle, there's probably a problem with the MAF scaling. If a car with a VF40 appears to be drawing 300 grams per second at full throttle, but is running really rich, it's probably got a boost leak. And so on.
+
+6. Fuel
+* What's the IDC? 
+
+Most logs don't contain the injector duty cycle (IDC). Once you've verified that you're safely below 100%, it's not very interesting unless you're investigating a fueling problem, which is outside the scope of this how-to.
+
+Opinions differ on what constitutes a 'safe' IDC. My opinion is that you should stay below 90% but I have to acknowledge that there are people out there who have been running 100% or more for years.
+
+Well, they're not actually running more than 100% duty cycle, because that would be impossible, but the logged IDC is only approximate, and there are some factors which conspire to throw it off by a few percent. More about that on this wiki page.
+
+7. Air/Fuel Ratio
+* Does the log show the AFR from the stock sensor, or an aftermarket wideband? 
+* What's the load when the AFR starts to drop from 14.7? 
+* Does the AFR level out after that drop?
+* What's the AFR with it levels out? 
+* What's the load when the AFR levels out? 
+* What's the richest AFR in the log? 
+
+The stock O2 sensor should read in the 14-ish range at idle and cruise. It may fluctuate, touching 15 or 13 occasionally - this is not cause for concern. If it's consistently in the high teens (example) , the car has a vacuum leak, a fuel delivery problem, or really inappropriate MAF or injector scaling in the tune. If it's consistently 13 or below at idle and/or cruise, it's probably the tune. There are other things that can screw up the AFR readings of course, but this how-to is intended to teach you to recognize problems, not solve them.
+
+A data log will never show the AFR from the stock O2 sensor being lower than about 11.1 (the actual limit varies slightly from ECU to ECU). If you see a string of 11.14 in the "AF Sensor #1" column, all that really tells you is that the true AFR is richer than that. Also note that if the O2 sensor is in the usual location at the base of the up-pipe, it will not read accurately when the car is under boost.
+
+It's normal for the AFR to read around 20 when the driver lifts off the throttle. The ECU will actually stop spraying fuel entirely when engine braking, and the sensor maxes out around 20.3 or so.
+
+6. Boost
+* What's the peak boost, and at what RPM does it happen? 
+* What's the boost at redline? 
+* How quickly does boost build after the driver goes to full throttle? 
+* Does boost hold steady, or fluctuate? 
+
+6.1. Are the boost levels reasonable for this turbocharger, fuel, and supporting modifications?
+
+This is something you'll only learn by looking at lots of data logs. To be honest, I can't evaluate this for anything but a VF40 or ATP3076 because those are the only ones I've owned. So all I'm going to say here is that each turbo has a happy zone for a given fuel, and if you're familiar with the setup in question you may be able to offer some insight.
+
+6.2. Is the boost curve reasonable?
+
+Usually, boost will increase linearly, level off, and taper a couple psi as RPM approaches redline. How much it tapers (if at all) is up to the tuner, and there's plenty variation between good tunes by good tuners. If you're familiar with the turbo and supporting mods you may be able to offer an opinion about the RPM at which peak boost is reached, but note that this will vary by gear and driving conditions (hills, dyno load, etc), so be sure to consider all the variables.
+
+Look for boost curves that shoot up very high, then abruptly dip back down, then level off. This is a boost spike. Sometimes you'll see that pattern a two or three times in a single pull. This is a boost oscillation. Spikes and oscillations are both symptoms of poor boost tuning. One of the problems with oscillations is that the peak boost may be higher than the rest of the tune (fueling, timing, etc) can accommodate safely. Also note that the RPM at which the peaks occur can vary quite a bit, so one good pull doesn't necessarily mean that subsequent pulls won't hit a fueling or timing cell that leads to detonation.
+
+Look for boost curves that increase from midrange RPM to redline. This might be a deliberate decision by the tuner, but it almost certainly isn't. This kind of thing can be caused by poor tuning, and therefore fixed with better tuning. Some people call that boost creep, others just call it bad tuning. Real boost creep - the kind that everyone agrees to call boost creep - is caused by having a wastegate that is just too small to flow enough exhaust to limit boost at high RPM. Boost creep can also lead to detonation, so it's not a good thing. It can put the ECU into unproven cells in the fuel and timing tables and it can lead to high intake temperatures which in turn facilitate detonation.
+
+7. How do I get NSFW to analyze my log?
+
+I don't mind helping people learn to tune. However I do mind doing someone's tuner's job. If you'd like me to help you learn to analyze logs, answer the questions below when you post it. Or, if you don't know the answer, ask a question instead - that's fine too, it helps me to make this guide more useful.
+
+But if you're not willing to do this much work, neither am I.  :)
+
+* Is the engine knocking at all?
+* If so, then at what RPM and load did each of the knock events happen?
+* What was the AFR when the knock happened?
+* What was the throttle doing when the knock happened?
+
+* What's the highest MAF reading, and at what RPM?
+* What's the highest load reading, and at what RPM?
+
+* Does the log show the AFR from the stock sensor, or an aftermarket wideband? 
+* What's the load when the AFR starts to drop from 14.7? 
+* Does the AFR level out after that drop?
+* What's the AFR when it levels out?
+* Is it leveling out because of the stock sensor? 
+
+* What's the peak boost, and at what RPM does it happen? 
+* What's the boost at redline?
