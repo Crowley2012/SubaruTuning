@@ -12,11 +12,11 @@
         <parameter id="E5" units="psi"/>
         <parameter id="P23" units="degrees"/>
         <parameter id="P67" units="V"/>
-        <parameter id="E6" units="psi relative sea level"/>
+        <parameter id="E6" dash="selected" units="psi relative sea level"/>
         <parameter id="P25" units="psi"/>
         <parameter id="P24" units="psi"/>
         <parameter id="E8" units="absolute %"/>
-        <parameter id="P27" units="psi"/>
+        <parameter id="P27" dash="selected" units="psi"/>
         <parameter id="E9" units="absolute %"/>
         <parameter id="E11" units="degrees"/>
         <parameter id="E10" dash="selected" units="degrees"/>
