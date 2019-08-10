@@ -57,7 +57,7 @@
         <parameter id="E71" units="volts"/>
         <parameter id="E73" units="%"/>
         <parameter id="E72" units="psi relative"/>
-        <parameter id="P2" units="F"/>
+        <parameter id="P2" dash="selected" units="F"/>
         <parameter id="E75" units="estimated AFR"/>
         <parameter id="P3" units="%"/>
         <parameter id="E30" units="%"/>
