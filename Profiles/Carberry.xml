@@ -37,7 +37,7 @@
         <parameter id="P203" units="mpg (US)"/>
         <parameter id="P202" units="psi"/>
         <parameter id="E20" units="psi absolute"/>
-        <parameter id="E22" units="degrees"/>
+        <parameter id="E22" dash="selected" units="degrees"/>
         <parameter id="P243" units="%"/>
         <parameter id="E21" units="psi relative sea level"/>
         <parameter id="P242" units="%"/>
@@ -69,7 +69,7 @@
         <parameter id="P9" units="mph"/>
         <parameter id="P239" units="degrees"/>
         <parameter id="P54" units="mA"/>
-        <parameter id="P10" units="degrees"/>
+        <parameter id="P10" dash="selected" units="degrees"/>
         <parameter id="P56" units="ohm"/>
         <parameter id="P12" dash="selected" units="g/s"/>
         <parameter id="P11" units="F"/>

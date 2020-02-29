@@ -1,23 +1,18 @@
-CONVERTED
+CONVERTED [A4TC401L | CARBERRY]
                 Target Boost
                 Knock-CEL Enable
                 Max Wastegate Duty
                 SD/MAF/Blend Mode
                 MAF Sensor Scaling
-                Force Pass Readiness Monitors
-
-APM - A4TC401L
-                Base Timing
-                Boost Limit (CEL)
-                CL to OL Delay
-                Initial Off-Idle Wastegate Duty
-                Primary Open Loop Fueling
-                Turbo Dynamics Burst
-                Turbo Dynamics Continuous
-            X   Force Pass Readiness Monitors
-            X   MAF Sensor Scaling
-            X   Max Wastegate Duty
-            X   Target Boost
+                Rev Limit (Fuel Cut)
+                Launch Control - Enable
+                Injector Flow Scaling
+                Injector Latency
+            ?   Base Timing | Base Ignition Timing
+            ?   Initial Off-Idle Wastegate Duty | Initial Wastegate Duty
+            ?   Max WasteGate Duty Compensation (IAT) | Initial / Max WasteGate Duty Compensation (IAT)
+            ?   Max Wastegate Duty Compensation (Atm. Pressure) | Initial / Max Wastegate Duty Compensation (Atm. Pressure)
+            ?   Primary Open Loop Fueling | Primary Open Loop Fueling (Anti-Lag Conditions Not Met)
 
                 TGV CEL Fix (P1086, P1087, P1088, P1089)
                 TGV CEL Fix (P1090, P1091, P1092, P1093)
@@ -28,15 +23,42 @@ APM - A4TC401L
                 (P0545) EGT SENSOR CIRCUIT LOW
                 (P0546) EGT SENSOR CIRCUIT HIGH
 
+APM - A4TC401L
+                Turbo Dynamics Burst
+                Turbo Dynamics Continuous
+                CL to OL Delay
+                Boost Limit (CEL)
+                Force Pass Readiness Monitors
+            X   Primary Open Loop Fueling
+            X   Initial Off-Idle Wastegate Duty
+            X   Max WasteGate Duty Compensation (IAT)
+            X   Max Wastegate Duty Compensation (Atm. Pressure)
+            X   Base Timing
+            X   Force Pass Readiness Monitors
+            X   MAF Sensor Scaling
+            X   Max Wastegate Duty
+            X   Target Boost
+
+            X   TGV CEL Fix (P1086, P1087, P1088, P1089)
+            X   TGV CEL Fix (P1090, P1091, P1092, P1093)
+            X   TGV CEL Fix (P1094, P1095, P1096, P1097)
+            X   (P0420) CAT EFFICIENCY BELOW THRESHOLD
+            X   (P0458) EVAP PURGE VALVE CIRCUIT LOW
+            X   (P0459) EVAP PURGE VALVE CIRCUIT HIGH
+            X   (P0545) EGT SENSOR CIRCUIT LOW
+            X   (P0546) EGT SENSOR CIRCUIT HIGH
+
 STUDEMAN - CARBERRY
-                Base Ignition Timing
                 Disable A/F Learning in Open Loop
-                Initial Wastegate Duty
-                Injector Flow Scaling
-                Injector Latency
-                Launch Control - Enable
-                Primary Open Loop Fueling (Anti-Lag Conditions Not Met)
-                Rev Limit (Fuel Cut)
+            X   Injector Flow Scaling
+            X   Injector Latency
+            X   Launch Control - Enable
+            X   Rev Limit (Fuel Cut)
+            X   Primary Open Loop Fueling (Anti-Lag Conditions Not Met)
+            X   Initial Wastegate Duty
+            X   Initial / Max WasteGate Duty Compensation (IAT)
+            X   Initial / Max Wastegate Duty Compensation (Atm. Pressure)
+            X   Base Ignition Timing
             X   Knock-CEL Enable
             X   MAF Sensor Scaling
             X   Max Wastegate Duty
