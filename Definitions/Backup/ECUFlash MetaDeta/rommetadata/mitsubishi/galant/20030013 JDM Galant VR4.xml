@@ -1,0 +1,23 @@
+<rom>
+	<romid>
+		<xmlid>20030013</xmlid>
+		<internalidaddress>1021a</internalidaddress>
+		<internalidhex>20030013</internalidhex>
+		<caseid>--</caseid>
+		<make>Mitsubishi</make>
+		<market>JDM</market>
+		<model>Galant/Legnum</model>
+		<submodel>VR4</submodel>
+		<transmission>Manual/Automatic</transmission>
+		<year>--</year>
+		<flashmethod>mitsukernel</flashmethod>
+		<memmodel>H8539F</memmodel>
+	</romid>
+	
+	<notes>
+	     2012/11/28 [Tactrix] Visually examined tables for obvious errors, but no in-car verification has been done.
+  	</notes>
+
+	<include>vr4base</include>
+
+</rom>

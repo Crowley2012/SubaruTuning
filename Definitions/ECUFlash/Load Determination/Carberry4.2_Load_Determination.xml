@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rom>
+  <romid>
+    <xmlid>CarBerry</xmlid>
+    <internalidaddress>200</internalidaddress>
+    <internalidstring>CarBerry</internalidstring>
+    <ecuid>3D04EA4605</ecuid>
+    <year>02-03</year>
+    <market>JDM</market>
+    <make>Subaru</make>
+    <model>Impreza</model>
+    <submodel>STi</submodel>
+    <transmission>MT/AT</transmission>
+    <memmodel>68HC16Y5</memmodel>
+    <flashmethod>wrx02</flashmethod>
+  </romid>
+  <include>CarBerryBASE</include>
+  <table name="Base Ignition Timing X-Axis Determination (Load/MAP)" address="B80D"></table> 
+</rom>

@@ -1,0 +1,12 @@
+<rom>
+	<romid>
+		<xmlid>read_subaruhitachish72543</xmlid>
+		<make>Subaru</make>
+		<market>ALL</market>
+		<model></model>
+		<submodel>hitachi</submodel>
+		<year>2013+</year>
+		<flashmethod>subaruhitachi</flashmethod>			
+		<memmodel>SH72543R</memmodel>
+	</romid>
+</rom>	

@@ -1,0 +1,14 @@
+<rom>
+	<romid>
+		<xmlid>read_mitsush72531</xmlid>
+		<make>Mitsubishi</make>
+		<market>ALL</market>
+		<model></model>
+		<submodel>Lancer MH8115F|Outlander MH8115F</submodel>
+		<year>2015+</year>
+		<flashmethod>mitsucan</flashmethod>			
+		<flashmethod>mitsubootloader</flashmethod>			
+		<memmodel>SH72531</memmodel>
+		<checksummodule>mitsucan</checksummodule>
+	</romid>
+</rom>	

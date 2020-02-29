@@ -1,0 +1,13 @@
+<rom>
+	<romid>
+		<xmlid>read_sti05</xmlid>
+		<make>Subaru</make>
+		<market>ALL</market>
+		<model></model>
+		<submodel>DBW WRX/STi|DBW FXT/OBXT/LGT/Baja</submodel>
+		<year>2005-2007|2005-2006</year>
+		<flashmethod>sti05</flashmethod>			
+		<memmodel>SH7058</memmodel>
+		<checksummodule>subarudbw</checksummodule>
+	</romid>
+</rom>	

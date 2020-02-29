@@ -1,0 +1,12 @@
+<rom>
+	<romid>
+		<xmlid>read_evo7</xmlid>
+		<make>Mitsubishi</make>
+		<market>ALL</market>
+		<model></model>
+		<submodel>3rd Gen/EVO7-8 MH8206F</submodel>
+		<year>2001-2005</year>
+		<flashmethod>mitsukernel</flashmethod>			
+		<memmodel>SH7052</memmodel>
+	</romid>
+</rom>	

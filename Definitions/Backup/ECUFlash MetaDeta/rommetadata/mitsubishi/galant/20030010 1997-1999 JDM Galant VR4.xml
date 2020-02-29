@@ -1,0 +1,19 @@
+<rom>
+	<romid>
+		<xmlid>20030010</xmlid>
+    		<internalidaddress>1021A</internalidaddress>
+    		<internalidhex>20030010</internalidhex>
+		<caseid>MD340288/MD340289</caseid>
+		<make>Mitsubishi</make>
+		<market>JDM</market>
+		<model>Galant/Legnum</model>
+		<submodel>VR4</submodel>
+		<transmission>Manual/Automatic</transmission>
+		<year>1997-1999</year>
+		<flashmethod>mitsukernel</flashmethod>
+		<memmodel>H8539F</memmodel>
+	</romid>
+
+	<include>vr4base</include>
+
+</rom>

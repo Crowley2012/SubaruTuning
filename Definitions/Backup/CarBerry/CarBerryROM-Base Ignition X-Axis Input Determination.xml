@@ -1,0 +1,43 @@
+<roms>
+ <!--TERMS, CONDITIONS, AND DISCLAIMERS
+- - - - - - - - - - - - - - - - - - - - - - - - -
+WARNING: Creator is not responsible for any damage or injury to car, property, or body, nor responsible for any laws broken by using these definitions.
+
+These definitions are created for FREE without any sort of guarantee. USE AT YOUR OWN RISK!-->
+ <rom>
+  <romid>
+   <xmlid>CarBerryBASE</xmlid>
+   <market>USDM</market>
+   <make>Subaru</make>
+   <model>Impreza</model>
+   <submodel>WRX</submodel>
+   <transmission>MT/AT</transmission>
+   <filesize>192kb</filesize>
+   <memmodel>68HC16Y5</memmodel>
+   <flashmethod>wrx02</flashmethod>
+  </romid>
+  <table type="Switch" name="Base Ignition Timing X-Axis Determination (Load/MAP)" category="Ignition Timing - Advance" sizey="1" beforeram="true">
+   <description>This table switches the X-Axis input between Engine Load and Manifold Absolute Pressure. Select the axis style you would like to use, save the rom and then close it. Import the corresponding MAP_Ignition or Load_Ignition definition into RomRaider and move it to the top of the list (important). Re-open the rom you saved previously, once opened with the correct definition file you will see that the X-Axis values have changed; you will need to re-enter all X-Axis header values for the Base Ignition Timing tables (Map1 and Map2). It is important to use the correct definition file based on what selection is made in this table, failure to do so will result in incorrect ignition timing calculation.</description>
+   <state name="Load Based X-Axis" data="F4" />
+   <state name="MAP Based X-Axis" data="EA" />
+  </table>
+ </rom>
+ <rom base="CarBerryBASE">
+  <romid>
+   <xmlid>CarBerry</xmlid>
+   <internalidaddress>200</internalidaddress>
+   <internalidstring>CarBerry</internalidstring>
+   <ecuid>3D04EA4605</ecuid>
+   <year />
+   <market>Romraider</market>
+   <make>16bit</make>
+   <model>Speed</model>
+   <submodel>Density</submodel>
+   <transmission>Project</transmission>
+   <memmodel>68HC16Y5</memmodel>
+   <flashmethod>wrx02</flashmethod>
+   <filesize>192kb</filesize>
+  </romid>
+  <table name="Base Ignition Timing X-Axis Determination (Load/MAP)" storageaddress="0xB80D" />
+ </rom>
+</roms>  

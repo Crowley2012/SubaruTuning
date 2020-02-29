@@ -1,0 +1,14 @@
+<rom>
+	<romid>
+		<xmlid>read_mitsum32176f6</xmlid>
+		<make>Mitsubishi</make>
+		<market>ALL</market>
+		<model></model>
+		<submodel>4G Eclipse AT MH8304F|Colt MH8303F</submodel>
+		<year>2006+</year>
+		<flashmethod>mitsucan</flashmethod>			
+		<flashmethod>mitsubootloader</flashmethod>			
+		<memmodel>M32176F6</memmodel>
+		<checksummodule>mitsucan</checksummodule>
+	</romid>
+</rom>	

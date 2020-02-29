@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--ECUFLASH SUBARU CARBERRY STANDARD UNITS ECU DEFINITION FILE (VERSION 0.8.3.1b) 4-25-2012-->
+<!--TERMS, CONDITIONS, AND DISCLAIMERS
+- - - - - - - - - - - - - - - - - - - - - - - - -
+These definitions are created for FREE without any sort of guarantee. The developers cannot be held liable for any damage or injury incurred as a result of these definitions. USE AT YOUR OWN RISK!-->
+<rom>
+  <romid>
+    <xmlid>CarBerryBASE</xmlid>
+    <internalidaddress>200</internalidaddress>
+    <make>Subaru</make>
+  </romid>
+  <table name="Base Ignition Timing X-Axis Determination (Load/MAP)" category="Ignition Timing - Advance" type="1D" level="2" scaling="LoadVersion">
+  <description>This table switches the X-Axis input between Engine Load and Manifold Absolute Pressure. Select the axis style you would like to use, save the rom and then close it. Import the corresponding MAP_Ignition or Load_Ignition definition into RomRaider and move it to the top of the list (important). Re-open the rom you saved previously, once opened with the correct definition file you will see that the X-Axis values have changed; you will need to re-enter all X-Axis header values for the Base Ignition Timing tables (Map1 and Map2). It is important to use the correct definition file based on what selection is made in this table, failure to do so will result in incorrect ignition timing calculation.</description>
+    </table>   
+  <scaling name="LoadVersion" storagetype="bloblist">
+    <data name="Load Based X-Axis" value="F4" />
+    <data name="MAP Based X-Axis" value="EA" />	
+  </scaling>  	
+ </rom>

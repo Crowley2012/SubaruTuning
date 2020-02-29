@@ -1,0 +1,12 @@
+<rom>
+	<romid>
+		<xmlid>read_subarush7059cand</xmlid>
+		<make>Subaru</make>
+		<market>ALL</market>
+		<model></model>
+		<submodel>CAN Diesel Vehicles</submodel>
+		<year>EURO5</year>
+		<flashmethod>subarucand</flashmethod>			
+		<memmodel>SH7059</memmodel>
+	</romid>
+</rom>	

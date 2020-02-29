@@ -1,0 +1,12 @@
+<rom>
+	<romid>
+		<xmlid>read_wrx04</xmlid>
+		<make>Subaru</make>
+		<market>USDM</market>
+		<model>Impreza</model>
+		<submodel>WRX</submodel>
+		<year>2004-2005</year>
+		<flashmethod>wrx04</flashmethod>			
+		<memmodel>68HC16Y5</memmodel>
+	</romid>
+</rom>	

@@ -1,0 +1,45 @@
+<rom>
+  <romid>
+    <xmlid>AZ1G202I</xmlid>
+    <internalidaddress>2004</internalidaddress>
+    <internalidstring>AZ1G202I</internalidstring>
+    <ecuid>6912783007</ecuid>
+    <year>08/09</year>
+    <market>USDM</market>
+    <make>Subaru</make>
+    <model>Impreza</model>
+    <submodel>STi</submodel>
+    <transmission>MT</transmission>
+    <memmodel>SH7058</memmodel>
+    <flashmethod>subarucan</flashmethod>
+    <checksummodule>subarudbw</checksummodule>
+  </romid>
+  <include>AZ1G201I</include>
+
+	<!-- Ignition Dwell -->
+
+	<table name="Ignition Dwell" address="d5cc0">
+		<table name="Engine Speed" address="d5c6c"/>
+		<table name="Battery Volts" address="d5cac"/>
+	</table>
+	
+	<!-- Front AF Sensor Smoothing -->
+
+	<table name="Front AF Sensor Smoothing Table" address="d5d80">
+		<table name="Smoothed MAF" address="d5d60"/>
+		<table name="Engine Load" address="d5d70"/>
+	</table>
+
+	<!-- Idle Speed Stability Tables -->
+
+	<table name="Idle Speed Stability A" address="d46d8">
+		<table name="Idle Speed Error" address="d464c"/>
+		<table name="Engine Speed Delta" address="d46ac"/>
+	</table>
+
+	<table name="Idle Speed Stability B" address="d4974">
+		<table name="Idle Speed Error" address="d48e8"/>
+		<table name="Engine Speed Delta" address="d4948"/>
+	</table>
+
+</rom>

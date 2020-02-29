@@ -1,0 +1,12 @@
+<rom>
+	<romid>
+		<xmlid>read_subarush72531brz</xmlid>
+		<make>Subaru</make>
+		<market>ALL</market>
+		<model></model>
+		<submodel>BRZ</submodel>
+		<year>2013+</year>
+		<flashmethod>subarubrz</flashmethod>			
+		<memmodel>SH72531</memmodel>
+	</romid>
+</rom>	

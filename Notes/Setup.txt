@@ -1,0 +1,20 @@
+Install Romraider
+Install EcuFlash
+
+Carberry Rom
+    Download zip file
+    Run patch program
+
+Romraider
+    Add ecu definitions
+    Add 3 carberry definitions
+        Change order based on definitions to load
+
+Logger
+    Download Logger definitions
+    Set definition location in Romraider Logger
+    Add car_defs.xml to romraider install folder
+
+EcuFlash
+    Set the Metadata directory with Subaru folder
+    Add the carberry ecuflash definitions in metadata folder

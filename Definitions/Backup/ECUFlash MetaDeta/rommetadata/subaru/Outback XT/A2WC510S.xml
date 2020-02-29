@@ -1,0 +1,36 @@
+<rom>
+  <romid>
+    <xmlid>A2WC510S</xmlid>
+    <internalidaddress>2000</internalidaddress>
+    <internalidstring>A2WC510S</internalidstring>
+    <ecuid>2F12795206</ecuid>
+    <year>05</year>
+    <market>USDM</market>
+    <make>Subaru</make>
+    <model>Outback</model>
+    <submodel>XT</submodel>
+    <transmission>MT</transmission>
+    <memmodel>SH7058</memmodel>
+    <flashmethod>sti05</flashmethod>
+    <checksummodule>subarudbw</checksummodule>
+  </romid>
+  <include>A2WC510N</include>
+
+    <table name="Ignition Dwell" address="cd630">
+        <table name="X" address="cd5dc"/>
+        <table name="Y" address="cd61c"/>
+    </table>
+
+    <table name="AF 3 Correction Limits" address="2de28">
+    </table>
+
+    <table name="Front AF Sensor Smoothing Table" address="cd6f0">
+        <table name="X" address="cd6d0"/>
+        <table name="Y" address="cd6e0"/>
+    </table>
+
+    <table name="Idle Speed Stability A" address="cc258">
+        <table name="X" address="cc1f8" elements="17"/>
+        <table name="Y" address="cc23c" elements="7"/>
+    </table>
+</rom>
