@@ -1,0 +1,12 @@
+<rom>
+	<romid>
+		<xmlid>read_evo5</xmlid>
+		<make>Mitsubishi</make>
+		<market>ALL</market>
+		<model></model>
+		<submodel>2nd Gen/EVO5-6 MH7202F</submodel>
+		<year>1996-2001</year>
+		<flashmethod>mitsukernel</flashmethod>			
+		<memmodel>H8539F</memmodel>
+	</romid>
+</rom>	

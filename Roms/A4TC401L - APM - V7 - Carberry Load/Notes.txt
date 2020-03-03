@@ -22,6 +22,14 @@ NEW CONVERTED
                 (P0459) EVAP PURGE VALVE CIRCUIT HIGH
                 (P0545) EGT SENSOR CIRCUIT LOW
                 (P0546) EGT SENSOR CIRCUIT HIGH
+                
+                Injector DTCs (P0261, P0264, P0267, P0270)
+                Secondary Ignition DTC (P0350)
+                OCV DTCs (P1306, P1307, P1308, P1309)
+                Front O2 Sensor DTCs (P0130, P0031, P0030)
+                CAM Sensor B DTCs (P0365, P0390)
+                WasteGate Solenoid DTCs (P0245, P0246)
+                Evap Purge Valve DTCs (P0458, P0459)
 
 
 
@@ -44,11 +52,11 @@ CONVERTED [A4TC401L | CARBERRY]
             X    TGV CEL Fix (P1086, P1087, P1088, P1089)
             X    TGV CEL Fix (P1090, P1091, P1092, P1093)
             X    TGV CEL Fix (P1094, P1095, P1096, P1097)
-                (P0420) CAT EFFICIENCY BELOW THRESHOLD
-                (P0458) EVAP PURGE VALVE CIRCUIT LOW
-                (P0459) EVAP PURGE VALVE CIRCUIT HIGH
-                (P0545) EGT SENSOR CIRCUIT LOW
-                (P0546) EGT SENSOR CIRCUIT HIGH
+            X    (P0420) CAT EFFICIENCY BELOW THRESHOLD
+            X    (P0458) EVAP PURGE VALVE CIRCUIT LOW
+            X    (P0459) EVAP PURGE VALVE CIRCUIT HIGH
+            X    (P0545) EGT SENSOR CIRCUIT LOW
+            X    (P0546) EGT SENSOR CIRCUIT HIGH
 
 APM - A4TC401L
                 Turbo Dynamics Burst

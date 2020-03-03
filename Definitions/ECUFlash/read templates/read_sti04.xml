@@ -1,0 +1,13 @@
+<rom>
+	<romid>
+		<xmlid>read_sti04</xmlid>
+		<make>Subaru</make>
+		<market>ALL</market>
+		<model></model>
+		<submodel>DBW STi/FXT/LGT/Baja</submodel>
+		<year>2004</year>
+		<flashmethod>sti04</flashmethod>			
+		<memmodel>SH7055</memmodel>
+		<checksummodule>subarudbw</checksummodule>
+	</romid>
+</rom>	

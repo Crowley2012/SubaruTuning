@@ -1,0 +1,14 @@
+<rom>
+	<romid>
+		<xmlid>read_mitsum32186f8</xmlid>
+		<make>Mitsubishi</make>
+		<market>ALL</market>
+		<model></model>
+		<submodel>EVO X MH8106F|CAN Vehicles MH8106F</submodel>
+		<year>2006+</year>
+		<flashmethod>mitsucan</flashmethod>			
+		<flashmethod>mitsubootloader</flashmethod>			
+		<memmodel>M32186F8</memmodel>
+		<checksummodule>mitsucan</checksummodule>
+	</romid>
+</rom>	
