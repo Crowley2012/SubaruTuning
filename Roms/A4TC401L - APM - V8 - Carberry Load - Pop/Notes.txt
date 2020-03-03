@@ -1,0 +1,8 @@
+Based off of V7
+
+Pops @ 2400-4400
+
+Base Ignition Timing
+Primary Open Loop Fueling
+Base Timing Idle Below
+Base Timing Idle Above
