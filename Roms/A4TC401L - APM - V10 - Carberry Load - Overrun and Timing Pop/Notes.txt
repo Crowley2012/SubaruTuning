@@ -1,0 +1,10 @@
+Based off of V8
+
+Pops @ 2400-4400
+
+Decel Fuel Cut RPM Threshold
+Fuel Resume Initial Injector Pulse
+Fuel Resume Initial Pulse RPM Delta Threshold
+Fuel Cut Base Delay
+Neutral Delay
+Base Ignition Timing
