@@ -1,0 +1,4 @@
+Miles
+	161700
+Throttle sensor voltage - P19
+	.66 - 3.94

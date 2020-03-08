@@ -42,7 +42,7 @@
         <parameter id="E28" units="ms"/>
         <parameter id="E27" units="offset"/>
         <parameter id="P41" units="%"/>
-        <parameter id="E29" dash="selected" units="AFR"/>
+        <parameter id="E29" units="AFR"/>
         <parameter id="P89" units="%"/>
         <parameter id="P47" units="%"/>
         <parameter id="P46" units="%"/>
@@ -51,14 +51,14 @@
         <parameter id="E71" units="volts"/>
         <parameter id="E73" units="%"/>
         <parameter id="E72" units="psi relative"/>
-        <parameter id="P2" dash="selected" units="F"/>
+        <parameter id="P2" units="F"/>
         <parameter id="E75" units="estimated AFR"/>
         <parameter id="P3" units="%"/>
         <parameter id="E30" units="%"/>
         <parameter id="E74" units="estimated AFR"/>
         <parameter id="P4" units="%"/>
         <parameter id="E76" units="estimated AFR"/>
-        <parameter id="P7" units="psi"/>
+        <parameter id="P7" dash="selected" units="psi"/>
         <parameter id="P233" units="µs"/>
         <parameter id="P8" dash="selected" units="rpm"/>
         <parameter id="P9" units="mph"/>
@@ -71,7 +71,7 @@
         <parameter id="P56" units="ohm"/>
         <parameter id="P12" dash="selected" units="g/s"/>
         <parameter id="P11" units="F"/>
-        <parameter id="P58" units="AFR"/>
+        <parameter id="P58" dash="selected" units="AFR"/>
         <parameter id="P13" units="%"/>
         <parameter id="P15" units="V"/>
         <parameter id="P18" units="V"/>
