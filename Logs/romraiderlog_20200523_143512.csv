@@ -1,0 +1,4 @@
+Time (msec),A/F Sensor #1 (AFR),Engine Load* (g/rev),Engine Speed (rpm),Feedback Knock Correction* (degrees),Fine Learning Knock Correction* (degrees),IAM* (raw ecu value),Ignition Base Timing* (degrees),Ignition Total Timing (degrees),Manifold Absolute Pressure (psi),Mass Airflow (g/s),Target Boost* (psi relative sea level),Throttle Sensor Voltage (V)
+0,23.66,0.11,2617,0.00,0.00,16,-10.16,-10.50,4.06,9.61,-3.94,0.64
+172,24.00,0.11,2630,0.00,0.00,16,-10.16,-10.50,3.92,9.09,-3.94,0.64
+343,23.54,0.11,2602,0.00,0.00,16,-10.16,-10.50,3.92,9.61,-3.94,0.64
