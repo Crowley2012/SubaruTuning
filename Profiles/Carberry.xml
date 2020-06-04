@@ -32,7 +32,7 @@
         <parameter id="P202" units="psi"/>
         <parameter id="E20" units="psi absolute"/>
         <parameter id="E22" dash="selected" units="degrees"/>
-        <parameter id="E21" units="psi relative sea level"/>
+        <parameter id="E21" dash="selected" units="psi relative sea level"/>
         <parameter id="P201" units="%"/>
         <parameter id="E24" units="raw enrichment value"/>
         <parameter id="P200" units="g/rev"/>
