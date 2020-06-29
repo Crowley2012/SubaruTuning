@@ -1,0 +1,5 @@
+Log started at: 6/5/2020 5:58:02 PM
+Logger type: Subaru Select Monitor
+ECU ID: 3D04EA4605
+ECU Name: Subaru Impreza STi MT/AT JDM
+ECU base ID: ssmbase16
