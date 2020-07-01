@@ -1,0 +1,40 @@
+Base Ignition Timing
+    E2  -   Engine Load                             -   Engine Load
+    P8  -   Engine Speed                            -   Engine Speed
+    E22 -   Ignition Timing                         -   Ignition Base Timing*
+
+Base Timing Idle
+    P8  -   Engine Speed                            -   Engine Speed
+    P19 -   Throttle Calibration Base (Constant)    -   Throttle Sensor Voltage
+    E22 -   Ignition Timing                         -   Ignition Base Timing*
+
+Primary Open Loop Fueling
+    P7  -   Manifold Pressure (PSI Absolute)        -   Manifold Absolute Pressure
+    P8  -   Engine Speed                            -   Engine Speed
+    P58 -   Air/Fuel                                -   A/F Sensor #1
+
+Target Boost
+    P19 -   Throttle Position Sensor                -   Throttle Sensor Voltage
+    P8  -   Engine Speed                            -   Engine Speed
+    E21 -   Target Boost                            -   Manifold Relative Sea Level Pressure (Direct)*
+
+Initial Wastegate Duty / Max Wastegate Duty
+    P19 -   Throttle Position Sensor                -   Throttle Sensor Voltage
+    P8  -   Engine Speed                            -   Engine Speed
+    P36 -   Wastegate Duty                          -   Primary Wastegate Duty Cycle
+
+Target Boost Compensation (ECT)
+    P2  -   Coolant Temperature                     -   Coolant Temperature
+
+Turbo Dynamics Proportional / Integral
+    E5  -   Boost Error                             -   Boost Error*
+    E7  -   Turbo Dynamics Proportional             -   Turbo Dynamics Proportional*
+
+MAF Sensor Scaling
+    P18 -   MAF Sensor (volts)                      -   Mass Airflow Sensor Voltage
+    P12 -   MAF Sensor Scaling Airflow (g/s)        -   Mass Airflow
+
+Knock Correction Retard Max
+    P7  -   Manifold Pressure (PSI Absolute)        -   Manifold Absolute Pressure
+    P8  -   Engine Speed                            -   Engine Speed
+    E22 -   Ignition Timing                         -   Ignition Base Timing*
