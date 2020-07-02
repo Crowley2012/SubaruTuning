@@ -1,0 +1,120 @@
+Important logging parameters
+    Engine Speed
+    Mass Air Flow
+    Engine Load
+    Throttle Position
+    Ignition Timing
+    Fuel Trims
+    Air Fuel Ratio
+    
+Fuel Delivery
+    Short term fuel trim (STFT) = AF Correction
+    Long term fuel trim (LTFT) = AF Learning
+
+    Ideally you want the short and long term fuel trims sitting at 0 but +/- 5% is acceptable
+    A positive number means the ecu is adding fuel to match the targeted a/f
+    A negative number means the ecu is removing fuel to match the target a/f
+    These values are found in the Learning Table Values
+
+    Higher air fuel ratio is lean
+    Lower air fuel ratio is rich
+    Stoichmetric ratio is 14.7
+
+    Volumetric efficiency table
+    Need to scale if ecu uses the MAP sensor to calculate load
+
+    Formulas for
+        Total ignition timing
+        Target a/f
+
+Ignition Timing
+    Tuning Strategy
+        Perform a run
+        Add 2 degrees of timing
+        Check effects on hp and tq
+
+    Higher timing is advanced
+    Lower timing is retarded
+
+    Goal is to find Maxium Brake Torque (MBT) timing
+    Keep a 2-3 degree saftey margin from the onset of knock
+    
+    For turbo engines begin tuning the ignition timing
+    At the lowest boost level (wastegate spring pressure - 0% wgdc)
+    Once ignition is figured out we can add our desired boost target
+
+    Keep the ignition timing table a smooth shape
+    Limit the change between cells to no more than 4-5 degrees
+
+MAF Scaling
+    Most important table since it controls loads which is used by timing, fueling and boost tables
+
+    Measuring the error in the a/f being commanded and the a/f being recorded in the exhaust
+    When theres an error the ecu thinks there is more or less air entering the engine
+
+    If we find that the a/f is 5% leaner than target, this could be corrected by increasing the MAF sensor 
+        calibration at this voltage by 5%
+
+    Useful to perform long terms so that you can use averages
+
+    Calculate change to MAF scaling with following equation
+    pi x radius ^ 2
+    radius = diamter / 2
+    new housing sectional area / old housing sectional area
+    After getting the percentage you can multiply all values in the MAF table by result
+
+Injector Scaling
+    2 techniques
+    Simple: Injector flow scaling and injector latency
+    Advanced: Pulse width, fuel pressure and battery voltage
+        injectors will supply values to copy into ecu tables
+
+    Start by checking the fuel trims at cruise and adjust the injector scaling from there
+    If the trims are +10% the ecu thinks the injectors are bigger than they are and is supplying less fuel
+        In this case decrease the injector scaling by the same amount as the trim percentage
+
+    Once the cruising trims are close move on the idle and make changes to the latency values
+    If trims are positive the injectors need to be opened longer and increase the latency numbers
+    Changing latency values has a smaller effect on the cruise tune
+
+    Imposssible to tune a car that has a bigger intake / larger maf and also larger injectors
+    Tune for one at a time 
+
+Boost Control
+    0% wastegate duty cycle = open (no boost)
+    100% wastegate duty cycle = closed (max boost)
+
+    Always make small changes
+    Need to adjust the wastegate duty tables in order to reach our target boost 
+
+Transient Tuning / Transient Enrichment
+    Required to ensure stable control over the air fuel ratios as the throttle is opened/closed rapidly
+
+    Fuel film is created on the cyclinder walls
+    High load and pressure there is a larger film
+    Low load and pressure there is a smaller film
+
+    During the transient event the cylinder is not receiving all the fuel from the injector hence it will run 
+        lean momentarily, opposite situation when sharply closed 
+    
+    Based on rate of change of throttle position, but its really the change in manifold pressure that is key
+        to transient enrichment 
+
+    If tuning for larger injectors you can scale the transient table by injector size
+    Larger injectors will have a smaller transient value 
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
