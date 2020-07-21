@@ -103,7 +103,11 @@ Transient Tuning / Transient Enrichment
     If tuning for larger injectors you can scale the transient table by injector size
     Larger injectors will have a smaller transient value 
 
-    
+Base Tune
+    Disable DTCs
+    Scale MAF or MAP sensors
+    Setup injectors
+    Fuel Trims atleast +-20%
 
 
 
