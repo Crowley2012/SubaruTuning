@@ -105,15 +105,41 @@ Transient Tuning / Transient Enrichment
     If tuning for larger injectors you can scale the transient table by injector size
     Larger injectors will have a smaller transient value 
 
-Base Tune
+Configure Base Tune
     Disable DTCs
     Scale MAF or MAP sensors
     Setup injectors
     Fuel Trims atleast +-20%
 
+Optimising the Tune
+    Get the car to run / idle
+    Get the car to do a full WOT
+    Optimize for best hp / tq 
 
+    If knock is present retard the timing 
+    When no knock is present lean out the fuel to hit target afr 
 
+    If MAF scaled correctly the recorded afr should match the afr in the map
+    If its off by a few percent we can adjust the afr in the map
+    Correction Factor = Mesured AFR / Target AFR 
 
+    Once fuel is accurate we can optimize the ignition timing
+    Add by 2 degrees until getting close to mbt (maxium brake torque) or knock occurs
+
+    Start with minimum or wastegate boost pressure then slowly increase the boost
+
+Steady state tuning
+    Tuning MAF
+    First do close loop, use gas and left foot braking to get data
+    Then do WOT 
+    Ignore cells that were in closed loop
+    Ignore data at the beginning of WOT because there is a delay in adjusting to the tart afr 
+
+    Tuning SD 
+    Create a histogram for RPM x MAP 
+    Same as MAF start getting closed loop data then WOT
+    Make changes to volumetric efficiency tables 
+    
 
 
 
