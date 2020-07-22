@@ -63,6 +63,8 @@ MAF Scaling
     new housing sectional area / old housing sectional area
     After getting the percentage you can multiply all values in the MAF table by result
 
+    https://forums.nasioc.com/forums/showthread.php?t=1427448
+
 Injector Scaling
     2 techniques
     Simple: Injector flow scaling and injector latency

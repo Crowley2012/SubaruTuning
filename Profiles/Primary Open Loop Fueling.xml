@@ -5,19 +5,17 @@
     <parameters>
         <parameter id="P61" units="A"/>
         <parameter id="E1" dash="selected" units="raw ecu value"/>
-        <parameter id="E2" dash="selected" units="g/rev"/>
+        <parameter id="E2" units="g/rev"/>
         <parameter id="P65" units="%"/>
         <parameter id="E3" units="status"/>
         <parameter id="P21" units="ms"/>
-        <parameter id="E5" units="psi"/>
+        <parameter id="E4" units="absolute %"/>
         <parameter id="P23" units="degrees"/>
         <parameter id="P67" units="V"/>
-        <parameter id="E6" dash="selected" units="psi relative sea level"/>
+        <parameter id="E6" units="psi relative sea level"/>
         <parameter id="P25" units="psi"/>
+        <parameter id="E7" units="absolute %"/>
         <parameter id="P24" units="psi"/>
-        <parameter id="E8" units="absolute %"/>
-        <parameter id="P27" dash="selected" units="psi"/>
-        <parameter id="E9" units="absolute %"/>
         <parameter id="E11" units="degrees"/>
         <parameter id="E10" dash="selected" units="degrees"/>
         <parameter id="E13" units="%"/>
@@ -28,19 +26,13 @@
         <parameter id="E16" units="%"/>
         <parameter id="E19" units="ms"/>
         <parameter id="E18" units="raw ecu value"/>
-        <parameter id="P31" units="F"/>
         <parameter id="P36" units="%"/>
-        <parameter id="P79" units="F"/>
-        <parameter id="P35" units="V"/>
         <parameter id="P38" units="%"/>
-        <parameter id="P39" units="V"/>
         <parameter id="P203" units="mpg (US)"/>
         <parameter id="P202" units="psi"/>
         <parameter id="E20" units="psi absolute"/>
         <parameter id="E22" units="degrees"/>
-        <parameter id="P243" units="%"/>
         <parameter id="E21" units="psi relative sea level"/>
-        <parameter id="P242" units="%"/>
         <parameter id="P201" units="%"/>
         <parameter id="E24" units="raw enrichment value"/>
         <parameter id="P200" units="g/rev"/>
@@ -50,63 +42,62 @@
         <parameter id="E28" units="ms"/>
         <parameter id="E27" units="offset"/>
         <parameter id="P41" units="%"/>
-        <parameter id="E29" dash="selected" units="AFR"/>
-        <parameter id="P40" units="V"/>
+        <parameter id="E29" units="AFR"/>
         <parameter id="P89" units="%"/>
         <parameter id="P47" units="%"/>
+        <parameter id="P46" units="%"/>
+        <parameter id="P49" units="degrees"/>
+        <parameter id="P48" units="degrees"/>
         <parameter id="E71" units="volts"/>
         <parameter id="E73" units="%"/>
         <parameter id="E72" units="psi relative"/>
-        <parameter id="P2" dash="selected" units="F"/>
+        <parameter id="P2" units="F"/>
         <parameter id="E75" units="estimated AFR"/>
         <parameter id="P3" units="%"/>
         <parameter id="E30" units="%"/>
         <parameter id="E74" units="estimated AFR"/>
         <parameter id="P4" units="%"/>
         <parameter id="E76" units="estimated AFR"/>
-        <parameter id="P7" units="psi"/>
+        <parameter id="P7" dash="selected" units="psi"/>
+        <parameter id="P233" units="�s"/>
         <parameter id="P8" dash="selected" units="rpm"/>
         <parameter id="P9" units="mph"/>
-        <parameter id="P239" units="degrees"/>
+        <parameter id="P50" units="%"/>
+        <parameter id="P52" units="mA"/>
+        <parameter id="P51" units="%"/>
         <parameter id="P54" units="mA"/>
         <parameter id="P10" units="degrees"/>
+        <parameter id="P53" units="mA"/>
         <parameter id="P56" units="ohm"/>
-        <parameter id="P12" dash="selected" units="g/s"/>
+        <parameter id="P12" units="g/s"/>
         <parameter id="P11" units="F"/>
-        <parameter id="P58" units="AFR"/>
-        <parameter id="P13" dash="selected" units="%"/>
+        <parameter id="P58" dash="selected" units="AFR"/>
+        <parameter id="P13" units="%"/>
         <parameter id="P15" units="V"/>
         <parameter id="P18" units="V"/>
         <parameter id="P17" units="V"/>
         <parameter id="P19" units="V"/>
-        <parameter id="P241" units="rpm"/>
-        <parameter id="P240" units="rpm"/>
     </parameters>
     <switches>
+        <switch id="S3"/>
         <switch id="S4"/>
         <switch id="S5"/>
+        <switch id="S6"/>
         <switch id="S7"/>
         <switch id="S8"/>
         <switch id="S9"/>
+        <switch id="S31"/>
         <switch id="S20"/>
-        <switch id="S42"/>
         <switch id="S22"/>
-        <switch id="S21"/>
-        <switch id="S26"/>
-        <switch id="S28"/>
-        <switch id="S29"/>
         <switch id="S11"/>
-        <switch id="S55"/>
-        <switch id="S54"/>
+        <switch id="S21"/>
         <switch id="S13"/>
-        <switch id="S35"/>
-        <switch id="S34"/>
-        <switch id="S56"/>
+        <switch id="S26"/>
         <switch id="S15"/>
-        <switch id="S36"/>
-        <switch id="S39"/>
+        <switch id="S28"/>
         <switch id="S19"/>
         <switch id="S18"/>
+        <switch id="S29"/>
         <switch id="S1"/>
         <switch id="S2"/>
     </switches>

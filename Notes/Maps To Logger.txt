@@ -38,3 +38,7 @@ Knock Correction Retard Max
     P7  -   Manifold Pressure (PSI Absolute)        -   Manifold Absolute Pressure
     P8  -   Engine Speed                            -   Engine Speed
     E22 -   Ignition Timing                         -   Ignition Base Timing*
+
+Tip In Enrichment
+    E23 -   Throttle Angle Change                   -   Tip-in Throttle*
+    E24 -   Throttle Tip In Enrichment              -   Tip-in Enrichment (Last Calculated)*
