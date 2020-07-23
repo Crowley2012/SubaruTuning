@@ -1,3 +1,7 @@
+------------------------------------------------------------------
+General
+------------------------------------------------------------------
+
 Important logging parameters
     Engine Speed
     Mass Air Flow
@@ -8,8 +12,8 @@ Important logging parameters
     Air Fuel Ratio
     
 Fuel Delivery
-    Short term fuel trim (STFT) = AF Correction
-    Long term fuel trim (LTFT) = AF Learning
+    Short term fuel trim (STFT) = AF Correction #1
+    Long term fuel trim (LTFT) = AF Learning #1
 
     Ideally you want the short and long term fuel trims sitting at 0 but +/- 5% is acceptable
     A positive number means the ecu is adding fuel to match the targeted a/f
@@ -139,14 +143,34 @@ Steady state tuning
     Create a histogram for RPM x MAP 
     Same as MAF start getting closed loop data then WOT
     Make changes to volumetric efficiency tables 
-    
 
+After Tune
+    Check cruising fuel trims
+    Best to have fuel trims slightly negative (rich)
+    Short and long term cruise fuel trims +- 3%
+    Long term fuel trims can be disabled
+    Total trim = short + long term fuel trim
+    Want to be close to 0
 
+    Next WOT
+    Looking at fuel control afr compared to commanded afr 
+    Looking for knock 
+    Use high enough gear to get higher load
 
+    Next transient response of engine
+    Response of sharp inputs
+    Check for knock in gear changes
+    Whats happening at medium load
+    50-75% throttle mid range
 
+    Create a spark retard histogram -> (timing table) RPM x load or maf (cylinder airmass g)
+    Retard the timing 
+    Smooth change to timing table 
 
+------------------------------------------------------------------
+ECU Flash
+------------------------------------------------------------------
 
-
-
-
+Downloading Stock ROM
+    Gray tables are not defined / don't exists
 
