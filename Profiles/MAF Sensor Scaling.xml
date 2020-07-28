@@ -59,7 +59,7 @@
         <parameter id="P4" dash="selected" units="%"/>
         <parameter id="E76" units="estimated AFR"/>
         <parameter id="P7" units="psi"/>
-        <parameter id="P233" units="ï¿½s"/>
+        <parameter id="P233" units="µs"/>
         <parameter id="P8" units="rpm"/>
         <parameter id="P9" units="mph"/>
         <parameter id="P50" units="%"/>
@@ -71,7 +71,7 @@
         <parameter id="P56" units="ohm"/>
         <parameter id="P12" dash="selected" units="g/s"/>
         <parameter id="P11" dash="selected" units="F"/>
-        <parameter id="P58" units="AFR"/>
+        <parameter id="P58" dash="selected" units="AFR"/>
         <parameter id="P13" units="%"/>
         <parameter id="P15" units="V"/>
         <parameter id="P18" dash="selected" units="V"/>
@@ -131,7 +131,7 @@
         <external id="X_TXS_Tuner_Pro_Knock" units="knock"/>
         <external id="X_MRF_Stealth_Gauge_MAP" units="psi"/>
         <external id="X_PLX_Fuel_Trim_-_Long_Term" units="%"/>
-        <external id="X_AEM_UEGO_Wideband_[9600_baud]" units="AFR Gasoline"/>
+        <external id="X_AEM_UEGO_Wideband_[9600_baud]" dash="selected" units="AFR Gasoline"/>
         <external id="X_PLX_Temperature_-_Oil/H20" units="C"/>
         <external id="X_PLX_Manifold_Boost" units="psi"/>
         <external id="X_TXS_UTEC_MODMAFV" units="mafv"/>
