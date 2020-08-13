@@ -174,3 +174,64 @@ ECU Flash
 Downloading Stock ROM
     Gray tables are not defined / don't exists
 
+Base Tune
+    Requested torque
+
+    For bigger turbos better to lower boost target in spool cells since we wont be hitting these targets and it will throw off the boost corrections / over boost 
+
+    Initial and Max Wastegate Duty tables
+    Maintain a 15% difference between the 2 tables
+    The intial dc is the transition from open loop to closed loop
+    Make changes to one table then copy to other table and +-15%
+
+    Primary Open loop
+    Set all cells used in run to 11.61 (before maf scaling)
+    Gets a better result if all cells set to same target
+
+    Close loop fueling
+    Remove delays as they can cause issues when adding boost (knock)
+    Want to make the transition more rich
+    Step 3: 16:30
+    Target the last 2 columns when car is entering boost
+    Removing cl to ol delays is recommended
+    Set Cl to OL Delay to 0
+    Set CL Delay Max engine speed by gear to 2500
+
+    Injectors
+    Update injector flow scaling
+    Injector latency
+    
+    MAF
+    MAF Sensor Scaling
+    Measure old vs new intake and change table by percentage of difference
+
+    Ignition Timing
+    Subaru has a base ignition table then additional tables that can add or subtract to this base based on the knock control system
+        Might be multiple tables (AVCS) but always compare because they might have the same values
+        Copy values to other tables
+    In ECUFlash you can press the H key for horizonal interpolation
+        V key for vertical interpolation
+    IAM Ignition Advance Multiplier used in total timing calculation (also known as dynamic advance multiplier DAM)
+    Some Subarus have tables for the amount the ecu can retard timing
+        Personal preference is to reduce the amount of control the ecu has, so reduce these values
+        From 15 degrees to 6 degrees, more than enough for a tuned engine
+        Interpolate the leftover values
+        After doing this you need to add timing back into the base ignition table since you reduced the amount of timing the ecu can advance
+    
+    Requested Torque
+    There is a Requested Torque table = throttle angle x engine speed
+    Changes the throttle body response
+    This is how sport modes work, makes it more responsive
+
+    Rev Limiter
+    On/off difference = 50
+
+    Speed Limiter
+    On/off difference = 2 set to 200
+
+    The rear o2 sensor in Subarus have a lot of power and can cause issues, best to delete it
+    Can replace it with a wideband
+
+    Last step is to disable dtc codes
+
+MAF / Injector Scaling

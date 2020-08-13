@@ -131,7 +131,7 @@
         <external id="X_TXS_Tuner_Pro_Knock" units="knock"/>
         <external id="X_MRF_Stealth_Gauge_MAP" units="psi"/>
         <external id="X_PLX_Fuel_Trim_-_Long_Term" units="%"/>
-        <external id="X_AEM_UEGO_Wideband_[9600_baud]" units="AFR Gasoline"/>
+        <external id="X_AEM_UEGO_Wideband_[9600_baud]" dash="selected" units="AFR Gasoline"/>
         <external id="X_PLX_Temperature_-_Oil/H20" units="C"/>
         <external id="X_PLX_Manifold_Boost" units="psi"/>
         <external id="X_TXS_UTEC_MODMAFV" units="mafv"/>
