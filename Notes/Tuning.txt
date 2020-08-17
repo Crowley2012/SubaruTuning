@@ -235,3 +235,50 @@ Base Tune
     Last step is to disable dtc codes
 
 MAF / Injector Scaling
+    Subaru engines have an issue in the 2400 to 3200 light load into boost maf scaling creates errors
+    Map compensation table
+    Fuel system design causes this
+    Gather MAF data outside of these ranges
+
+    Logging parameters
+        AF Correction #1 = stft based on front o2 sensor
+        AF Learning #1 = long term fuel trim
+        AF Sensor #1 = Front o2 sensor
+        CL/OL Fueling = 8 closed / 10 open loop
+        Enging Load (1 byte)**
+        Engine Speed
+        Feedback Knock Correction = Instant response to knock
+        Fine Knock Learning = response overtime
+        IAM
+        Final Fueling Base (2 byte) = AFR target the ecu is asking for
+        Ignition Total Timing
+        Main Throttle Position
+        Manifold Absolute Pressure
+        Mass Airflow
+        Mass Airflow Sensor voltage
+        Primary Wastegate Duty Cycle 
+
+    Log these params and do a run
+    Mega log viewer hd
+    Graph 1
+        RPM
+    Graph 2
+        Manifold Absolute pressure
+        Mass Airflow Sensor voltage
+        Engine Load
+    Graph 3
+        IAM
+        Feedback Knock Correction
+        Fine Learning Knock Correction
+    Graph 4
+        Wideband
+        Final fueling base
+        AFR Error Subaru
+    Graph 5
+        AF Correction #1
+        AF Learning #1
+        Mass Airflow
+
+    On Subaru engines youll see when you first enter boost that you run lean
+    This is the due to the fueling issue
+    
