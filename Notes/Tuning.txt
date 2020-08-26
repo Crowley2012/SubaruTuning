@@ -279,6 +279,44 @@ MAF / Injector Scaling
         AF Learning #1
         Mass Airflow
 
+    You can check the MAF sensor voltage, on subaru its 0-5v, if close to 5v will need to upgrade in order to run more boost
+
     On Subaru engines youll see when you first enter boost that you run lean
     This is the due to the fueling issue
+
+    Set the scaling of the AFR gauge, final fueling and AFR sensor to be the same, this is needed because the gauge has a larger range of values and makes the graph misleading
+
+    You can create custom fields by going to mega log viewer > calculated fields > Custom Fields
+
+    Check the MAF Sensor limit and MAF reading, might need to increase the limit
+
+    Some subarus allow you to set the base IAM value
+
+    when tuning you dont want heat soak, cold start enrichments and the car should be at operating temps
+    Smooth with the throttle, dont want any transient acceleration enrichments
+    Long runs, smoth on the throttle
+
+    If you haven't disabled the rear o2 sensor you also want to log AF correction #3
+
+    Run 3 tests
+        Low RPM up until weird fueling issues / goes to OL
+        Higher RPM just above weird fueling issues
+        WOT run
+            looking at wideband and error between commanded 
+            learned short and long term trims will be carried over which is a trap
+            need to reset the ecu and those learned trims
+            tools > LTV > Reset ECU
+        Goal is to hit all cells in the MAF sensor scaling
+
+    CL/OL value of 7 is warmup mode
+
+    Reviewing logs @ 39 minutes
+
     
+
+
+
+
+Timing
+    base timing + KCA = total timing (without compensations) <- stock rom
+    base timing = total timing if IAM = 16 (without compensations) <- carberry rom
