@@ -3787,8 +3787,8 @@ These definitions are created for FREE without any sort of guarantee. The develo
   </table>
   <table type="3D" name="Map2 - Base Ignition Timing" category="Ignition Timing - Advance" storagetype="uint8" endian="big" sizex="17" sizey="18"  logparam="E22">
    <scaling units="Base Ignition Timing (degrees BTDC)" expression="(x*.3515625)-20" to_byte="(x+20)/.3515625" format="0.00" fineincrement=".2" coarseincrement="1" />
-   <table type="X Axis" name="Manifold Pressure" storagetype="uint16" endian="big" logparam="P7">
-    <scaling units="psi absolute" expression="x*.01933677" to_byte="x/.01933677" format="0.00" fineincrement=".08" coarseincrement="1" />
+   <table type="X Axis" name="Engine Load" storagetype="uint16" endian="big" logparam="E2">
+    <scaling units="g/rev" expression="x*0.0001220703125" to_byte="x/0.0001220703125" format="0.00" fineincrement=".01" coarseincrement=".1" />
    </table>
    <table type="Y Axis" name="Engine Speed" storagetype="uint16" endian="big" logparam="P8">
     <scaling units="RPM" expression="x*.1953125" to_byte="x/.1953125" format="#" fineincrement="50" coarseincrement="100" />
