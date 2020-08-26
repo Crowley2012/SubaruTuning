@@ -1,0 +1,8 @@
+Based on V19
+
+Disabled Anti-lag
+Setup second map for afr and timing
+Triggered with defog switch
+
+leaned afr by ~0.21-0.39
+Increased timing by 0.70
