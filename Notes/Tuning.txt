@@ -310,9 +310,47 @@ MAF / Injector Scaling
 
     CL/OL value of 7 is warmup mode
 
-    Reviewing logs @ 39 minutes
+    When CL/OL status is 7 (warm up) fuel trims are not taken into account and factory o2 sensor is not being used
 
-    
+    Reviewing logs @ 39 minutes
+        Reset the ecu between runs to make sure the trims are reset mainly for the WOT run
+        Do a slow run up until the subaru fueling issue around 2000 rpm
+
+        Check that there is a smooth increase in MAF Sensor voltage
+        First run you want to disregard the wideband data and open loop data, just want to look at the fuel trims
+        A/F correction and learning #1, use total trim to analyze
+
+        Disregard total trim as youre coming off idle
+        Postive total trim = afr is lean = ecu is adding fuel = target afr - total trim
+        Negative total trim = afr is rich = ecu is subtracting fuel = target afr + total trim
+
+        Use the MAf Sensor Scaling histogram in Mega log viewer
+        Again ignore logs when coming off throttle
+
+        Do a second run going from 4000 to high rpm
+        Trying to hit as many cells in the Maf sensor scaling table
+
+        Do a WOT run 2000-7000 rpm
+        No we are interested in the afr values
+        We want to set a fixed afr value of 11.61
+        Compare the afr gauge to the final fueling value
+        Higher value = lean / Lower value = rich
+        We want to use the AFR Error custom parameter instead of the total trim parameter
+
+        Get a general idea of what the average value is from the histogram
+        Better to underestimate
+        Ignore the 2800 - 3800 rpm range fuel issue
+
+    Now we can hop over to the MAF Sensor Scaling table
+    Want to keep a generally smooth curve
+    In the example he wants to reduce the lower range by 2.5% so he multiplies these values by 0.975
+    In the upper range he was rich by 5% so he multiplies it by 0.96
+    Then those inbetween cells and multiplies them by the difference between the upper and lower changes
+    Flash and then repeat
+
+    @ 59:00 he talks about fixing the fueling issues for newer subarus
+    Map compensation tables
+
 
 
 
