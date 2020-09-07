@@ -345,6 +345,8 @@ MAF / Injector Scaling
     Want to keep a generally smooth curve
     In the example he wants to reduce the lower range by 2.5% so he multiplies these values by 0.975
     In the upper range he was rich by 5% so he multiplies it by 0.96
+    Negative Total Trim = AFR Rich = Lower MAF Sensor = * < 1 = Because we arent seeing as much air as we thought
+    Positive Total Trim = AFR LEAN = Higher MAF Sensor = * > 1 = Because we are seeing more air than we thought
     Then those inbetween cells and multiplies them by the difference between the upper and lower changes
     Flash and then repeat
 

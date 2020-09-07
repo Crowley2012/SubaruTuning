@@ -28,7 +28,7 @@
         <parameter id="E20" units="psi absolute"/>
         <parameter id="E22" dash="selected" units="degrees"/>
         <parameter id="E170" units="%"/>
-        <parameter id="E21" dash="selected" units="psi relative sea level"/>
+        <parameter id="E21" units="psi relative sea level"/>
         <parameter id="E171" units="F"/>
         <parameter id="P201" units="%"/>
         <parameter id="E24" units="raw enrichment value"/>
@@ -60,7 +60,7 @@
         <parameter id="P10" dash="selected" units="degrees"/>
         <parameter id="E169" units="Knock Events"/>
         <parameter id="P12" dash="selected" units="g/s"/>
-        <parameter id="P11" dash="selected" units="F"/>
+        <parameter id="P11" units="F"/>
         <parameter id="P13" units="%"/>
         <parameter id="P15" units="V"/>
         <parameter id="P18" dash="selected" units="V"/>
@@ -82,7 +82,7 @@
         <parameter id="E184" units="%"/>
         <parameter id="E185" units="%"/>
         <parameter id="E186" units="%"/>
-        <parameter id="P36" dash="selected" units="%"/>
+        <parameter id="P36" units="%"/>
         <parameter id="P38" units="%"/>
         <parameter id="P41" units="%"/>
         <parameter id="P47" units="%"/>
@@ -92,7 +92,7 @@
         <parameter id="E71" units="volts"/>
         <parameter id="E73" units="%"/>
         <parameter id="E72" units="psi relative"/>
-        <parameter id="P2" dash="selected" units="F"/>
+        <parameter id="P2" units="F"/>
         <parameter id="E75" dash="selected" units="estimated AFR"/>
         <parameter id="P3" dash="selected" units="%"/>
         <parameter id="E74" units="estimated AFR"/>
