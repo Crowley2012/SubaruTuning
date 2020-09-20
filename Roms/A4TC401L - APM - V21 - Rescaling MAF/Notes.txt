@@ -5,11 +5,14 @@ Copied over map 2 afr and timing tables to table 1
 Setup second afr map for rescaling maf
 Triggered with defog switch
 Disabled second timing map
+Disabled Evap FFB Compensation
+X - Disabled OL AF learning
 
 AFR targeting 11.00
 Updated to target 10.01
 
 MAF Sensor Changes
+2.27 ~ end of CL
 
 Round 1
 0.94-1.87 - 2%
@@ -31,3 +34,10 @@ Round 3
 Round 4
 2.11-2.54 - -2%
 4.30-4.69 - -3%
+
+Round 5
+0.94-1.72 - 1%
+1.80-2.11 - 2%
+2.54-3.36 - 3%
+3.48-3.59 - 1%
+3.95-4.30 - 1.5%
