@@ -271,9 +271,10 @@ MAF / Injector Scaling
         Feedback Knock Correction
         Fine Learning Knock Correction
     Graph 4
+        OL/CL Status
         Wideband
         Final fueling base
-        AFR Error Subaru
+        AFR Error Subaru / Total Trim
     Graph 5
         AF Correction #1
         AF Learning #1

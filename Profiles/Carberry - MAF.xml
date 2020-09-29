@@ -28,7 +28,7 @@
         <parameter id="E20" units="psi absolute"/>
         <parameter id="E22" dash="selected" units="degrees"/>
         <parameter id="E170" units="%"/>
-        <parameter id="E21" units="psi relative sea level"/>
+        <parameter id="E21" dash="selected" units="psi relative sea level"/>
         <parameter id="E171" units="F"/>
         <parameter id="P201" units="%"/>
         <parameter id="E24" units="raw enrichment value"/>
@@ -60,8 +60,8 @@
         <parameter id="P10" dash="selected" units="degrees"/>
         <parameter id="E169" units="Knock Events"/>
         <parameter id="P12" dash="selected" units="g/s"/>
-        <parameter id="P11" units="F"/>
-        <parameter id="P13" units="%"/>
+        <parameter id="P11" dash="selected" units="F"/>
+        <parameter id="P13" dash="selected" units="%"/>
         <parameter id="P15" units="V"/>
         <parameter id="P18" dash="selected" units="V"/>
         <parameter id="P17" units="V"/>
