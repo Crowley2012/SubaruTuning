@@ -3757,7 +3757,7 @@ These definitions are created for FREE without any sort of guarantee. The develo
   </table>
   <table type="3D" name="Base Ignition Timing" category="Ignition Timing - Advance" storagetype="uint8" endian="big" sizex="17" sizey="18"  logparam="E22">
    <scaling units="Base Ignition Timing (degrees BTDC)" expression="(x*.3515625)-20" to_byte="(x+20)/.3515625" format="0.00" fineincrement=".2" coarseincrement="1" />
-   <table type="X Axis" name="Engine Load" storagetype="uint16" endian="big" logparam="E2">
+   <table type="X Axis" name="Engine Load" storagetype="uint16" endian="big" logparam="E153">
     <scaling units="g/rev" expression="x*0.0001220703125" to_byte="x/0.0001220703125" format="0.00" fineincrement=".01" coarseincrement=".1" />
    </table>
    <table type="Y Axis" name="Engine Speed" storagetype="uint16" endian="big" logparam="P8">
