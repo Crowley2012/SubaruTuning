@@ -361,3 +361,14 @@ MAF / Injector Scaling
 Timing
     base timing + KCA = total timing (without compensations) <- stock rom
     base timing = total timing if IAM = 16 (without compensations) <- carberry rom
+
+
+
+
+Boost
+
+    A 0% Wastegate Duty Cycle (WGDC) setting will allow the solenoid to stay fully closed; 
+    which will force the turbo to run mechanical (spring - 11.6psi) pressure. 
+
+    A 100% WGDC setting will force the solenoid to stay fully open; 
+    which will force the turbo to run maximum boost pressure.
