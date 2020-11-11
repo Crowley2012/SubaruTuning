@@ -69,11 +69,11 @@
         <parameter id="E1" dash="selected" units="raw ecu value"/>
         <parameter id="E3" dash="selected" units="status"/>
         <parameter id="P21" units="ms"/>
-        <parameter id="E4" units="absolute %"/>
+        <parameter id="E4" dash="selected" units="absolute %"/>
         <parameter id="P23" units="degrees"/>
-        <parameter id="E6" units="psi relative sea level"/>
+        <parameter id="E6" dash="selected" units="psi relative sea level"/>
         <parameter id="P25" units="psi"/>
-        <parameter id="E7" units="absolute %"/>
+        <parameter id="E7" dash="selected" units="absolute %"/>
         <parameter id="P24" units="psi"/>
         <parameter id="E180" units="V"/>
         <parameter id="E181" units="V"/>
@@ -82,7 +82,7 @@
         <parameter id="E184" units="%"/>
         <parameter id="E185" units="%"/>
         <parameter id="E186" units="%"/>
-        <parameter id="P36" units="%"/>
+        <parameter id="P36" dash="selected" units="%"/>
         <parameter id="P38" units="%"/>
         <parameter id="P41" units="%"/>
         <parameter id="P47" units="%"/>

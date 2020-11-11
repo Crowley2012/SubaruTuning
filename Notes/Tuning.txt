@@ -372,3 +372,5 @@ Boost
 
     A 100% WGDC setting will force the solenoid to stay fully open; 
     which will force the turbo to run maximum boost pressure.
+
+    Disable boost by zeroing out the max wastegate duty table
