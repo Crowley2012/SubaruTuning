@@ -374,3 +374,5 @@ Boost
     which will force the turbo to run maximum boost pressure.
 
     Disable boost by zeroing out the max wastegate duty table
+
+    https://forums.nasioc.com/forums/showthread.php?t=1749675
