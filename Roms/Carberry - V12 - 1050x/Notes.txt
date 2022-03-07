@@ -1,3 +1,14 @@
 Tune for 1050x injectors
 
 http://help.injectordynamics.com/support/solutions/articles/4000009270-cobb-subaru
+
+http://injectordynamics.com/injectors/id1050-xds/
+
+https://www.romraider.com/forum/viewtopic.php?f=15&t=13903
+
+https://www.romraider.com/forum/viewtopic.php?f=15&t=19354&p=164393#p164393
+
+Updated injector settings
+	decel fuel cut
+	tip in
+	gear determination threshold
