@@ -1,7 +1,0 @@
-Take v18 and use of injector comparisons
-Set the injector flow rate by take the cobb value and multiply by 2. Insert as raw in romraider.
-
-https://www.romraider.com/forum/viewtopic.php?f=31&t=16577
-https://www.romraider.com/forum/viewtopic.php?f=28&t=16566
-
-https://docs.google.com/spreadsheets/d/14_dYV-NM1jM0ZT_ECLSNkNyu1sDV3Ccn/edit#gid=813706962

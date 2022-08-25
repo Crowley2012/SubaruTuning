@@ -1,0 +1,3 @@
+Turned off anti-lag / rotational idle
+Set base timing idle tables
+Pops above 2000

@@ -1,9 +1,0 @@
-Based off of V8
-
-Pops @ 2400-4800
-
-Base Ignition Timing
-Primary Open Loop Fueling
-Base Timing Idle Below
-Base Timing Idle Above
-Idle Target

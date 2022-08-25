@@ -1,0 +1,22 @@
+Cranking
+    new injectors / old injectors
+    987.27 / 562.45 = 0.57
+    multiply all 7 cranking tables by 0.57
+    multiply map2 cranking tables by 1.30
+
+-40     1.30
+-22     1.30
+-4      1.30
+14      1.30
+32      1.30
+50      1.30
+68      1.34
+86      1.33
+104     1.30
+122     1.30
+140     1.30
+158     1.30
+176     1.30
+194     1.30
+212     1.30
+230     1.30

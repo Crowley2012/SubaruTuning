@@ -1,0 +1,3 @@
+Based off of V16
+
+Removed pop settings based on v7 and v2

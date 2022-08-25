@@ -1,0 +1,5 @@
+Changed y-scaling for primary open loop table, should be better for cruising
+Lowered launch control timing
+Disabled Map 2 for timing and fueling
+Enabled Antilag
+Updated Antilag fueling table
