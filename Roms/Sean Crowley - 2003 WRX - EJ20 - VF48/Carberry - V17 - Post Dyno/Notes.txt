@@ -4,11 +4,12 @@ Cranking
     multiply all 7 cranking tables by 0.57
     multiply map2 cranking tables by 1.30
 
--40     1.30
--22     1.30
--4      1.30
-14      1.30
-32      1.30
+Cranking
+-40     1.40
+-22     1.40
+-4      1.40
+14      1.40
+32      1.40
 50      1.35
 68      1.35
 86      1.33
@@ -20,3 +21,5 @@ Cranking
 194     1.30
 212     1.30
 230     1.30
+
+Warmup
