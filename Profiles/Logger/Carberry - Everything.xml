@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-
 <profile protocol="SSM">
     <parameters>
         <parameter id="E152" units="raw"/>
@@ -76,11 +75,12 @@
         <parameter id="P24" units="psi"/>
         <parameter id="E180" units="V"/>
         <parameter id="E181" units="V"/>
-        <parameter id="E182" units="%"/>
+        <parameter id="E182" dash="selected" units="%"/>
         <parameter id="E183" units="%"/>
         <parameter id="E184" units="%"/>
         <parameter id="E185" units="%"/>
-        <parameter id="E186" units="%"/>
+        <parameter id="E186" dash="selected" units="%"/>
+        <parameter id="E187" units="Knock Events"/>
         <parameter id="P36" dash="selected" units="%"/>
         <parameter id="P38" units="%"/>
         <parameter id="P41" units="%"/>
